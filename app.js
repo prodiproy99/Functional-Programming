@@ -14,7 +14,7 @@ function uuid4() {
 
 
 /**
- * filter travers
+ * easily travers
  * filter
  * delete
  * updated
@@ -43,6 +43,7 @@ const students = {
 
 // console.log(students)
 
+// create new students
 const std = {
     id: uuid4(),
     name: "Dipto",
@@ -52,4 +53,18 @@ const std = {
 
 students[std.id] = std;
 
+// update
+const idToBeUpdated = '96187d88-0c94-48f3-9b3d-d17cd828ed49';
+const updateData = {
+    name: 'Joyonto',
+    email: 'joy@gmail.com'
+}
+
+students[idToBeUpdated] = {
+    ...students[idToBeUpdated],
+    ...updateData
+}
+
+// delete
+delete students[idToBeUpdated];
 console.log(students);
