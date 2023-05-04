@@ -136,6 +136,9 @@ const result = numbers.reduce((acc, cur, index) => {
 console.log(result);
 */
 
+
+/*
+How to find true value from a  array using Reduce
 function myReduce (array, cb, init) {
   let acc = init;
   for (let i = 0; i < array.length; i++) {
@@ -156,3 +159,24 @@ const result = myReduce(arr, (acc, cur) => {
 }, []);
 
 console.log(result);
+*/
+/**
+ * map all the time array return korbe
+ */
+const axios = require('axios').default;
+const url = 'https://jsonplaceholder.typicode.com/posts';
+
+async function getData() {
+  const { data } = await axios.get(url);
+  const result = data.map((item) => {
+    return {
+      userId: item.userId,
+      id: item.id,
+      title: item.title
+    }
+  })
+  return result;
+}
+
+getData()
+.then((data) => console.log(data))
