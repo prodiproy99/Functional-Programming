@@ -161,8 +161,12 @@ const result = myReduce(arr, (acc, cur) => {
 console.log(result);
 */
 /**
+ * axios
+ * json placeholder
  * map all the time array return korbe
  */
+
+/*
 const axios = require('axios').default;
 const url = 'https://jsonplaceholder.typicode.com/posts';
 
@@ -176,6 +180,7 @@ async function getData() {
   //   }
   // })
 
+
   const result = data.slice(0, 10).reduce((acc, cur) => {
     acc[cur.id] = { ...cur };
     delete acc[cur.id].body;
@@ -187,3 +192,35 @@ async function getData() {
 getData()
 .then((data) => console.log(data))
 .catch((e) => console.log(e));
+
+ */
+
+const names = [
+  'Animesh',
+  'Akhoy',
+  'Aditto',
+  'Dipto',
+  'Digonto',
+  'Joy',
+  'Jitu',
+  'Mishu',
+  'Mitu'
+]
+
+const namesGrouped = names.reduce((acc, cur) => {
+  const firstLetter = cur[0].toUpperCase();
+  if(firstLetter in acc){
+    acc[firstLetter].push(cur);
+  }else {
+    acc[firstLetter] = [cur];
+  }
+  return acc;
+}, {});
+
+Object.keys(namesGrouped).forEach((groupKey) => {
+console.log('---------', groupKey, '--------');
+namesGrouped[groupKey].forEach((name) => console.log(name));
+console.log('');
+})
+
+
