@@ -112,8 +112,7 @@ console.timeEnd('obj');
  * Reduce => Know one knows (Only you know) all possible value
  */
 
-const numbers = [1, 2, 3, 4, false, null, '', 5, 6];
-
+/* const numbers = [1, 2, 3, 4, false, null, '', 5, 6];
 
 const arr = [1, 2, 3, 4, 5, 6];
 
@@ -135,3 +134,5 @@ const result = numbers.reduce((acc, cur, index) => {
 }, '');
 
 console.log(result);
+*/
+
