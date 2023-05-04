@@ -168,7 +168,7 @@ const url = 'https://jsonplaceholder.typicode.com/posts';
 
 async function getData() {
   const { data } = await axios.get(url);
-  const result = data.map((item) => {
+  const result = data.slice(0, 10).map((item) => {
     return {
       userId: item.userId,
       id: item.id,
@@ -180,3 +180,4 @@ async function getData() {
 
 getData()
 .then((data) => console.log(data))
+.catch((e) => console.log(e));
