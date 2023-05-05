@@ -10,6 +10,8 @@
 
 // testF(2, 20);
 
+
+/*
 // sleep
 function sleep(name) {
     console.log(`${name} is sleeping`);
@@ -84,3 +86,25 @@ console.log('---------------');
 jobholderLifcycle('Aditto R')
 console.log('---------------');
 
+*/
+
+
+/*
+function sum(a, b){
+    return a + b;
+}
+function sub(a, b){
+    return a % b;
+}
+function times(a, b){
+    return a * b;
+}
+
+const a = 10;
+const b = 20;
+
+const r = times(sum(a, b), sub(a, b))
+
+console.log(r);
+
+*/
