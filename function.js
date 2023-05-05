@@ -108,3 +108,29 @@ const r = times(sum(a, b), sub(a, b))
 console.log(r);
 
 */
+
+/**
+ * Benifits
+ * - we can store functions in a variable
+ * - we can store function inside an object / array
+ * - we can pass function as an argument
+ * - we can also return a function from another function
+ */
+
+// Prove - function is a value
+function testFunction() {
+    console.log('I am a test function');
+}
+
+const fn = testFunction;
+console.log(fn);
+fn()
+
+const ar = [fn, testFunction];
+const o = {
+    fn: testFuntion
+}
+
+function returnFn(){
+    return testFunction;
+}
