@@ -117,6 +117,8 @@ console.log(r);
  * - we can also return a function from another function
  */
 
+
+/*
 // Prove - function is a value
 function testFunction() {
     console.log('I am a test function');
@@ -134,3 +136,37 @@ const o = {
 function returnFn(){
     return testFunction;
 }
+*/
+
+
+/*
+// let's construct a function 
+
+const fn = new Function(
+   "str",
+
+   `let obj = {};
+    for (let s of str) {
+        if (s !== ' ') {
+            obj[s] = s;
+        }
+    }
+    return obj;` 
+);
+
+// console.log(fn('Prodip'));
+
+const fData = {
+    paarams: ['a', 'b'],
+    body: ['const r = a+b', 'return r'],
+};
+
+const fBody = fData.body.reduce((acc, cur) =>{
+    acc += cur + ';';
+    return acc;
+}, '');
+
+const tf = new Function(...fData.paarams, fBody);
+console.log(tf(100, 200));
+
+*/
