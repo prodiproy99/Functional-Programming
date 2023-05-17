@@ -47,7 +47,7 @@
 //         rand1, rand2) => rand1 * rand2 + rand2 * rand1
 //     ));
 
-
+/**
 function power(p) {
     return function (n) {
         let result = 1;
@@ -70,3 +70,22 @@ console.log(power8(3));
 console.log(power8(2));
 console.log(power8(4));
 
+ */
+
+/**
+ * global
+ * local
+ * block
+ */
+
+{
+    const notScopped = "scope";
+
+    {
+        {
+            {
+                console.log(notScopped);
+            }
+        }
+    }
+}
